@@ -1,1 +1,1 @@
-user.name=Javieruser.password={"timestamp":"2019-04-01T03:56:02.183+0000","status":500,"error":"Internal Server Error","message":"Cannot load keys from store: class path resource [keystore.jks]","path":"/encrypt"}
+user.name: Javier
