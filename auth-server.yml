@@ -2,6 +2,7 @@ project:
   artifactId: auth-server
   name: Authentication Server
   description: ${project.name}
+  organization.name: EagerM
 em:
   serverConfig:
     replicas: ${EUREKA_URI:http://${em.serverConfig.peer1.address}/eureka},${EUREKA_URI:http://${em.serverConfig.peer2.address}/eureka},${EUREKA_URI:http://${em.serverConfig.peer3.address}/eureka}
