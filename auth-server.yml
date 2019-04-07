@@ -46,20 +46,6 @@ logging:
   level:
     liquibase: INFO
 
-eureka:
-  instance:
-    metadata-map:
-      appOwner: ${project.organization.name}
-      description: ${project.description}
-    hostname: ${em.auth-server.hostname}
-    #    preferIpAddress: true
-    lease-renewal-interval-in-seconds: 10
-    statusPageUrlPath: /
-  #    health-check-url-path: /health
-  client:
-    service-url:
-      defaultZone: ${em.serverConfig.replicas}
-
 management:
   endpoint:
     health:
@@ -81,3 +67,20 @@ spring:
   datasource:
     url: jdbc:h2:mem:test;
 
+---
+spring:
+  profiles: eureka-cli
+
+eureka:
+  instance:
+    metadata-map:
+      appOwner: ${project.organization.name}
+      description: ${project.description}
+    hostname: ${em.auth-server.hostname}
+    #    preferIpAddress: true
+    lease-renewal-interval-in-seconds: 10
+    statusPageUrlPath: /
+  #    health-check-url-path: /health
+  client:
+    service-url:
+      defaultZone: ${em.serverConfig.replicas}
