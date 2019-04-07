@@ -26,7 +26,7 @@ server:
 
 spring:
   application:
-    name: @project.artifactId@
+    name: ${project.artifactId}
   datasource:
     driver-class-name: org.h2.Driver
     username: user
@@ -45,8 +45,8 @@ logging:
 eureka:
   instance:
     metadata-map:
-      appOwner: @project.organization.name@
-      description: @project.description@
+      appOwner: ${project.organization.name}
+      description: ${project.description}
     hostname: ${em.auth-server.hostname}
     #    preferIpAddress: true
     lease-renewal-interval-in-seconds: 10
