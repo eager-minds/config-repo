@@ -7,22 +7,22 @@ em:
     hostname: localhost
     port: 8888
   eureka-server:
-    replicas: ${EUREKA_URI:http://${em.serverConfig.peer1.address}/eureka},${EUREKA_URI:http://${em.serverConfig.peer2.address}/eureka},${EUREKA_URI:http://${em.serverConfig.peer3.address}/eureka}
+    replicas: ${EUREKA_URI:http://${em.eureka-server.peer1.address}/eureka},${EUREKA_URI:http://${em.eureka-server.peer2.address}/eureka},${EUREKA_URI:http://${em.eureka-server.peer3.address}/eureka}
     user:
       name: admin
       password: pwd
     peer1:
       hostname: localhost
       port: 8761
-      address: ${em.serverConfig.user.name}:${em.serverConfig.user.password}@${em.serverConfig.peer1.hostname}:${em.serverConfig.peer1.port}
+      address: ${em.eureka-server.user.name}:${em.eureka-server.user.password}@${em.eureka-server.peer1.hostname}:${em.eureka-server.peer1.port}
     peer2:
       hostname: localhost
       port: 8762
-      address: ${em.serverConfig.user.name}:${em.serverConfig.user.password}@${em.serverConfig.peer2.hostname}:${em.serverConfig.peer2.port}
+      address: ${em.eureka-server.user.name}:${em.eureka-server.user.password}@${em.eureka-server.peer2.hostname}:${em.eureka-server.peer2.port}
     peer3:
       hostname: localhost
       port: 8763
-      address: ${em.serverConfig.user.name}:${em.serverConfig.user.password}@${em.serverConfig.peer3.hostname}:${em.serverConfig.peer3.port}
+      address: ${em.eureka-server.user.name}:${em.eureka-server.user.password}@${em.eureka-server.peer3.hostname}:${em.eureka-server.peer3.port}
   auth-server:
     appName: auth-server
     hostname: localhost
