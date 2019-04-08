@@ -1,1 +1,17 @@
-user.name: Javier
+project:
+  artifactId: config-server
+  name: Configuration Server
+  description: ${project.name}
+eureka:
+  instance:
+    metadata-map:
+      appOwner: ${project.organization.name}
+      description: ${project.description}
+    hostname: ${em.config-server.hostname}
+    #    preferIpAddress: true
+    lease-renewal-interval-in-seconds: 10
+    statusPageUrlPath: /
+  #    health-check-url-path: /health
+  client:
+    service-url:
+      defaultZone: ${em.serverConfig.replicas}
