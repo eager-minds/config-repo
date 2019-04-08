@@ -8,12 +8,6 @@ logging:
     com.netflix.discovery: 'OFF'
     org.springframework.cloud: 'DEBUG'
 
-spring:
-  security:
-    user:
-      name: admin
-      password: pwd
-
 eureka:
   instance:
     metadata-map:
