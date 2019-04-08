@@ -39,8 +39,7 @@ spring:
       password: pwd
 ---
 spring:
-  profiles:
-    active: eureka-client
+  profiles: eureka-client
 eureka:
   instance:
     metadata-map:
