@@ -3,9 +3,6 @@ project:
   name: Configuration Server
   description: ${project.name}
 
-server:
-  port: 8888
-
 logging:
   level:
     com.netflix.discovery: 'OFF'
