@@ -1,6 +1,3 @@
-spring:
-  profiles: eureka-client
-
 eureka:
   instance:
     #    preferIpAddress: true

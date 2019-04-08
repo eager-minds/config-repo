@@ -3,11 +3,6 @@ project:
   name: Configuration Server
   description: ${project.name}
 
-logging:
-  level:
-    com.netflix.discovery: 'OFF'
-    org.springframework.cloud: 'DEBUG'
-
 eureka:
   instance:
     metadata-map:

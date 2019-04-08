@@ -3,26 +3,11 @@ project:
   name: Authentication Server
   description: ${project.name}
 
-server:
-  port: ${em.auth-server.port}
-
 spring:
-  application:
-    name: ${project.artifactId}
   datasource:
     driver-class-name: org.h2.Driver
     username: user
     password: pwd
-  banner:
-    image:
-      location: em_banner.png
-      width: 76
-      height: 32
-      invert: true
-
-logging:
-  level:
-    liquibase: INFO
 
 eureka:
   instance:

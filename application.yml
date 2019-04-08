@@ -27,3 +27,18 @@ em:
     appName: auth-server
     hostname: localhost
     port: 8000
+
+spring:
+  banner:
+    image:
+      location: em_banner.png
+      width: 76
+      height: 32
+      invert: true
+
+logging:
+  level:
+    liquibase: INFO
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
+    
