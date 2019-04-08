@@ -2,27 +2,6 @@ project:
   artifactId: config-server
   name: Configuration Server
   description: ${project.name}
-em:
-  serverConfig:
-    replicas: ${EUREKA_URI:http://${em.serverConfig.peer1.address}/eureka},${EUREKA_URI:http://${em.serverConfig.peer2.address}/eureka},${EUREKA_URI:http://${em.serverConfig.peer3.address}/eureka}
-    user:
-      name: admin
-      password: pwd
-    peer1:
-      hostname: localhost
-      port: 8761
-      address: ${em.serverConfig.user.name}:${em.serverConfig.user.password}@${em.serverConfig.peer1.hostname}:${em.serverConfig.peer1.port}
-    peer2:
-      hostname: localhost
-      port: 8762
-      address: ${em.serverConfig.user.name}:${em.serverConfig.user.password}@${em.serverConfig.peer2.hostname}:${em.serverConfig.peer2.port}
-    peer3:
-      hostname: localhost
-      port: 8763
-      address: ${em.serverConfig.user.name}:${em.serverConfig.user.password}@${em.serverConfig.peer3.hostname}:${em.serverConfig.peer3.port}
-  config-server:
-    hostname: localhost
-    port: 8888
 
 server:
   port: 8888
@@ -37,19 +16,10 @@ spring:
     user:
       name: admin
       password: pwd
----
-spring:
-  profiles: eureka-client
+
 eureka:
   instance:
     metadata-map:
       appOwner: ${project.organization.name}
       description: ${project.description}
-    hostname: ${em.config-server.hostname}
-    #    preferIpAddress: true
-    lease-renewal-interval-in-seconds: 10
-    statusPageUrlPath: /
-  #    health-check-url-path: /health
-  client:
-    service-url:
-      defaultZone: ${em.serverConfig.replicas}
+    hostname: ${em.eureka-server.hostname}
