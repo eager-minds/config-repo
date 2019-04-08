@@ -41,4 +41,13 @@ logging:
     liquibase: INFO
     com.netflix.discovery: 'OFF'
     org.springframework.cloud: 'DEBUG'
-    
+
+eureka:
+  instance:
+    #    preferIpAddress: true
+    lease-renewal-interval-in-seconds: 10
+    statusPageUrlPath: /
+  #    health-check-url-path: /health
+  client:
+    service-url:
+      defaultZone: ${em.eureka-server.replicas}
