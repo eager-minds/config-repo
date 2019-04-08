@@ -2,29 +2,6 @@ project:
   artifactId: auth-server
   name: Authentication Server
   description: ${project.name}
-  organization.name: EagerM
-em:
-  serverConfig:
-    replicas: ${EUREKA_URI:http://${em.serverConfig.peer1.address}/eureka},${EUREKA_URI:http://${em.serverConfig.peer2.address}/eureka},${EUREKA_URI:http://${em.serverConfig.peer3.address}/eureka}
-    user:
-      name: admin
-      password: pwd
-    peer1:
-      hostname: localhost
-      port: 8761
-      address: ${em.serverConfig.user.name}:${em.serverConfig.user.password}@${em.serverConfig.peer1.hostname}:${em.serverConfig.peer1.port}
-    peer2:
-      hostname: localhost
-      port: 8762
-      address: ${em.serverConfig.user.name}:${em.serverConfig.user.password}@${em.serverConfig.peer2.hostname}:${em.serverConfig.peer2.port}
-    peer3:
-      hostname: localhost
-      port: 8763
-      address: ${em.serverConfig.user.name}:${em.serverConfig.user.password}@${em.serverConfig.peer3.hostname}:${em.serverConfig.peer3.port}
-  auth-server:
-    appName: auth-server
-    hostname: localhost
-    port: 8000
 
 server:
   port: ${em.auth-server.port}
@@ -57,9 +34,6 @@ eureka:
     lease-renewal-interval-in-seconds: 10
     statusPageUrlPath: /
   #    health-check-url-path: /health
-  client:
-    service-url:
-      defaultZone: ${em.serverConfig.replicas}
 
 management:
   endpoint:
