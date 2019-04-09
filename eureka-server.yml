@@ -19,7 +19,7 @@ spring:
 
 eureka:
   instance:
-    hostname: ${em.eureka-server.default.hostname}
+    hostname: ${em.eureka-server.hostname}
     appname: eureka-server
     metadataMap:
       user:
@@ -35,6 +35,7 @@ eureka:
 #    wait-time-in-ms-when-sync-empty: 0
 
 ---
+em.eureka-server.hostname: ${em.eureka-server.peer1.hostname}
 spring:
   profiles: peer1
 server:
@@ -44,6 +45,7 @@ eureka:
     hostname: ${em.eureka-server.peer1.hostname}
 
 ---
+em.eureka-server.hostname: ${em.eureka-server.peer2.hostname}
 spring:
   profiles: peer2
 server:
@@ -53,6 +55,7 @@ eureka:
     hostname: ${em.eureka-server.peer2.hostname}
 
 ---
+em.eureka-server.hostname: ${em.eureka-server.peer3.hostname}
 spring:
   profiles: peer3
 server:

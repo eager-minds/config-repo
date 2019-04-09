@@ -12,6 +12,7 @@ em:
     hostname: localhost
     port: 8888
   eureka-server:
+    hotname: localhost
     replicas: ${EUREKA_URI:http://${em.eureka-server.peer1.address}/eureka},${EUREKA_URI:http://${em.eureka-server.peer2.address}/eureka},${EUREKA_URI:http://${em.eureka-server.peer3.address}/eureka}
     user:
       name: admin
