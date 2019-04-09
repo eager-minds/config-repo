@@ -15,8 +15,6 @@ eureka:
       appOwner: ${project.organization.name}
       description: ${project.description}
     hostname: ${em.auth-server.hostname}
-    lease-renewal-interval-in-seconds: 10
-    statusPageUrlPath: /
 
 ---
 spring:

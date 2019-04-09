@@ -6,8 +6,8 @@ project:
 spring:
   security:
     user:
-      name: ${em.eureka-server.user.name}
-      password: ${em.eureka-server.user.password}
+      name: ${em.spring.security.user.name}
+      password: ${em.spring.security.user.password}
 
 eureka:
   client:
@@ -23,16 +23,13 @@ eureka:
     appname: eureka-server
     metadataMap:
       user:
-        name: ${spring.security.user.name}
-        password: ${spring.security.user.password}
+        name: ${em.eureka-server.user.name}
+        password: ${em.eureka-server.user.password}
       appOwner: ${project.organization.name}
       description: ${project.description}
-    statusPageUrlPath: /
   client:
     register-with-eureka: true
     fetch-registry: true
-    serviceUrl:
-      defaultZone: ${em.eureka-server.replicas}
   server:
     enableSelfPreservation: true
 #    wait-time-in-ms-when-sync-empty: 0
