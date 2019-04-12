@@ -1,6 +1,0 @@
-eureka:
-  instance:
-    metadata-map:
-      appOwner: ${project.organization.name}
-      description: ${project.description}
-    hostname: ${em.eureka-server.hostname}
