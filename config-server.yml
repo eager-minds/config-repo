@@ -2,13 +2,3 @@ project:
   artifactId: config-server
   name: Configuration Server
   description: ${project.name}
-
----
-spring.profiles: eureka-client
-
-eureka:
-  instance:
-    metadata-map:
-      appOwner: ${project.organization.name}
-      description: ${project.description}
-    hostname: ${em.eureka-server.hostname}
