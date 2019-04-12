@@ -11,14 +11,6 @@ spring:
       password: ${em.spring.security.user.password}
 
 eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-
----
-spring.profiles: eureka-client
-
-eureka:
   instance:
     appname: eureka-server
     metadataMap:
