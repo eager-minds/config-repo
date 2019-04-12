@@ -15,15 +15,3 @@ eureka:
       appOwner: ${project.organization.name}
       description: ${project.description}
     hostname: ${em.auth-server.hostname}
-
----
-spring:
-  profiles: dev
-  datasource:
-    url: jdbc:h2:file:./db/h2/DB
----
-spring:
-  profiles: test
-  datasource:
-    url: jdbc:h2:mem:test;
-
