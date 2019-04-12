@@ -67,6 +67,8 @@ management:
       # By default, only 'health' and 'info' are accessible via web
       exposure:
         include: '*'
+---
+spring.profiles: eureka-client
 
 eureka:
   instance:
