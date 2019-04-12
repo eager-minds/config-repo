@@ -3,6 +3,9 @@ project:
   name: Configuration Server
   description: ${project.name}
 
+---
+spring.profiles: eureka-client
+
 eureka:
   instance:
     metadata-map:
