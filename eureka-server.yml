@@ -10,7 +10,6 @@ spring:
       name: ${em.spring.security.user.name}
       password: ${em.spring.security.user.password}
 
----
 spring.profiles: eureka-client
 
 eureka:
