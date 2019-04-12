@@ -1,6 +1,6 @@
 eureka:
   instance:
-    hostname: ${em.eureka-server.hostname}
+    hostname: ${em.hostname}
     appname: eureka-server
     metadataMap:
       user:

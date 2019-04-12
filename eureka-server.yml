@@ -1,3 +1,4 @@
+em.hostname: ${em.eureka-server.peer1.hostname}
 project:
   artifactId: eureka-server
   name: Eureka Server
@@ -14,33 +15,24 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
 ---
-em.eureka-server.hostname: ${em.eureka-server.peer1.hostname}
+em.hostname: ${em.eureka-server.peer1.hostname}
 spring:
   profiles: peer1
 server:
   port: ${em.eureka-server.peer1.port}
-eureka:
-  instance:
-    hostname: ${em.eureka-server.peer1.hostname}
 
 ---
-em.eureka-server.hostname: ${em.eureka-server.peer2.hostname}
+em.hostname: ${em.eureka-server.peer2.hostname}
 spring:
   profiles: peer2
 server:
   port: ${em.eureka-server.peer2.port}
-eureka:
-  instance:
-    hostname: ${em.eureka-server.peer2.hostname}
 
 ---
-em.eureka-server.hostname: ${em.eureka-server.peer3.hostname}
+em.hostname: ${em.eureka-server.peer3.hostname}
+#    appname: ${em.eureka-server.appName}-${em.eureka-server.peer3.hostname}
 spring:
   profiles: peer3
 server:
   port: ${em.eureka-server.peer3.port}
-eureka:
-  instance:
-    #    appname: ${em.eureka-server.appName}-${em.eureka-server.peer3.hostname}
-    hostname: ${em.eureka-server.peer3.hostname}
 
