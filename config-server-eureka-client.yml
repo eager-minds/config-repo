@@ -1,12 +1,18 @@
 eureka:
   instance:
     appname: ${project.name}
-    metadataMap:
+    metadata-map:
+      appOwner: ${project.organization.name}
+      description: ${project.description}
       user:
         name: ${em.eureka-server.user.name}
         password: ${em.eureka-server.user.password}
+    lease-renewal-interval-in-seconds: 10
+    statusPageUrlPath: /
   client:
     register-with-eureka: true
     fetch-registry: true
+    service-url:
+      defaultZone: ${em.eureka-server.replicas}
   server:
     enableSelfPreservation: true
