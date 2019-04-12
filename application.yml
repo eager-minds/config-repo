@@ -72,10 +72,10 @@ spring.profiles: eureka-client
 
 eureka:
   instance:
+    hostname: localhost
     metadata-map:
       appOwner: ${project.organization.name}
       description: ${project.description}
-    hostname: localhost
     #    preferIpAddress: true
     lease-renewal-interval-in-seconds: 10
     statusPageUrlPath: /

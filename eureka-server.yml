@@ -14,6 +14,23 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+
+---
+spring.profiles: eureka-client
+
+eureka:
+  instance:
+    appname: eureka-server
+    metadataMap:
+      user:
+        name: ${em.eureka-server.user.name}
+        password: ${em.eureka-server.user.password}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  server:
+    enableSelfPreservation: true
+#    wait-time-in-ms-when-sync-empty: 0
 ---
 em.hostname: ${em.eureka-server.peer1.hostname}
 spring:
