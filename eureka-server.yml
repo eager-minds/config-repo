@@ -22,12 +22,19 @@ eureka:
   instance:
     appname: eureka-server
     metadataMap:
+      appOwner: ${project.organization.name}
+      description: ${project.description}
       user:
         name: ${em.eureka-server.user.name}
         password: ${em.eureka-server.user.password}
+    #    preferIpAddress: true
+    lease-renewal-interval-in-seconds: 10
+    statusPageUrlPath: /
   client:
     register-with-eureka: true
     fetch-registry: true
+    service-url:
+      defaultZone: ${em.eureka-server.replicas}
   server:
     enableSelfPreservation: true
 #    wait-time-in-ms-when-sync-empty: 0
