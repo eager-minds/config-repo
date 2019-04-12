@@ -1,0 +1,12 @@
+eureka:
+  instance:
+    appname: ${project.name}
+    metadataMap:
+      user:
+        name: ${em.eureka-server.user.name}
+        password: ${em.eureka-server.user.password}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  server:
+    enableSelfPreservation: true
