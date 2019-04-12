@@ -10,6 +10,15 @@ spring:
       name: ${em.spring.security.user.name}
       password: ${em.spring.security.user.password}
 
+---
+spring.profiles: no-eureka-client
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+---
 spring.profiles: eureka-client
 
 eureka:
