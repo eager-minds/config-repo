@@ -1,0 +1,4 @@
+spring:
+  profiles: peer1
+server:
+  port: ${em.eureka-server.peer1.port}

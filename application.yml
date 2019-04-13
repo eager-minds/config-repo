@@ -8,6 +8,8 @@ em:
       user:
         name: admin
         password: pwd
+  default:
+    hostname: localhost
   config-server:
     hostname: localhost
     port: 8888
@@ -67,19 +69,3 @@ management:
       # By default, only 'health' and 'info' are accessible via web
       exposure:
         include: '*'
----
-spring.profiles: eureka-client
-
-eureka:
-  instance:
-    hostname: localhost
-    metadata-map:
-      appOwner: ${project.organization.name}
-      description: ${project.description}
-    #    preferIpAddress: true
-    lease-renewal-interval-in-seconds: 10
-    statusPageUrlPath: /
-  #    health-check-url-path: /health
-  client:
-    service-url:
-      defaultZone: ${em.eureka-server.replicas}
