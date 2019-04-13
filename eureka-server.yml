@@ -1,4 +1,3 @@
-em.hostname: ${em.eureka-server.peer1.hostname}
 project:
   artifactId: eureka-server
   name: Eureka Server
@@ -14,26 +13,3 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-
----
-em.hostname: ${em.eureka-server.peer1.hostname}
-spring:
-  profiles: peer1
-server:
-  port: ${em.eureka-server.peer1.port}
-
----
-em.hostname: ${em.eureka-server.peer2.hostname}
-spring:
-  profiles: peer2
-server:
-  port: ${em.eureka-server.peer2.port}
-
----
-em.hostname: ${em.eureka-server.peer3.hostname}
-#    appname: ${em.eureka-server.appName}-${em.eureka-server.peer3.hostname}
-spring:
-  profiles: peer3
-server:
-  port: ${em.eureka-server.peer3.port}
-
