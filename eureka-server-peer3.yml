@@ -1,5 +1,3 @@
 #    appname: ${em.eureka-server.appName}-${em.eureka-server.peer3.hostname}
-spring:
-  profiles: peer3
 server:
   port: ${em.eureka-server.peer3.port}

@@ -1,4 +1,2 @@
-spring:
-  profiles: peer2
 server:
   port: ${em.eureka-server.peer2.port}
