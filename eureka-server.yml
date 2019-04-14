@@ -2,6 +2,7 @@ project:
   artifactId: eureka-server
   name: Eureka Server
   description: ${project.name}
+  version: 1.0-SNAPSHOT
 
 spring:
   security:

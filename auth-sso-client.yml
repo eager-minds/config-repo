@@ -1,1 +1,5 @@
-user.name: Javier
+project:
+  artifactId: auth-sso-client
+  name: Authentication Client
+  description: ${project.name}
+  version: 1.0-SNAPSHOT
