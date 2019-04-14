@@ -4,11 +4,11 @@ project:
   description: ${project.name}
   version: 1.0-SNAPSHOT
 
-spring:
-  security:
-    user:
-      name: ${em.spring.security.user.name}
-      password: ${em.spring.security.user.password}
+#spring:
+#  security:
+#    user:
+#      name: ${em.spring.security.user.name}
+#      password: ${em.spring.security.user.password}
 
 eureka:
   client:

@@ -8,7 +8,8 @@ eureka:
         name: ${em.eureka-server.user.name}
         password: ${em.eureka-server.user.password}
     #    preferIpAddress: true
-    lease-renewal-interval-in-seconds: 10
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 10
     statusPageUrlPath: /
   client:
     register-with-eureka: true

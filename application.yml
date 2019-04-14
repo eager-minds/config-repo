@@ -33,8 +33,18 @@ em:
       address: ${em.eureka-server.user.name}:${em.eureka-server.user.password}@${em.eureka-server.peer3.hostname}:${em.eureka-server.peer3.port}
   auth-server:
     appName: auth-server
-    hostname: localhost
     port: 8000
+    hostname: localhost
+    accessTokenUri: http://${em.auth-server.hostname}:${em.auth-server.port}/oauth/token
+    userAuthorizationUri: http://${em.auth-server.hostname}:${em.auth-server.port}/oauth/authorize
+    userInfoUri: http://${em.auth-server.hostname}:${em.auth-server.port}/user/me
+  auth-sso-client:
+    appName: auth-sso-client
+    hostname: localhost
+    port: 8001
+    client:
+      id: sso-ui
+      secret: secret
 
 spring:
   banner:
@@ -43,6 +53,8 @@ spring:
       width: 76
       height: 32
       invert: true
+  thymeleaf:
+    cache: false
 
 info:
   build:
