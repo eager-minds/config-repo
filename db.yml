@@ -1,0 +1,4 @@
+project:
+  artifactId: db
+  name: Database H2 Liquibase Patching
+  description: ${project.name}

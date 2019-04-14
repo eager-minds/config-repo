@@ -2,16 +2,3 @@ project:
   artifactId: auth-server
   name: Authentication Server
   description: ${project.name}
-
-spring:
-  datasource:
-    driver-class-name: org.h2.Driver
-    username: user
-    password: pwd
-
-eureka:
-  instance:
-    metadata-map:
-      appOwner: ${project.organization.name}
-      description: ${project.description}
-    hostname: ${em.auth-server.hostname}
