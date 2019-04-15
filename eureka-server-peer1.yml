@@ -1,2 +1,7 @@
 server:
   port: ${em.eureka-server.peer1.port}
+
+security:
+  oauth2:
+    client:
+      clientId: ${em.eureka-server.client.id}-peer1

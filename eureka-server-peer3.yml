@@ -1,3 +1,8 @@
 #    appname: ${em.eureka-server.appName}-${em.eureka-server.peer3.hostname}
 server:
   port: ${em.eureka-server.peer3.port}
+
+security:
+  oauth2:
+    client:
+      clientId: ${em.eureka-server.client.id}-peer3
